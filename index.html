@@ -29,7 +29,7 @@ Ryo Inagaki
 ============================================================
 -->
 
-<header class="heroheader" style="background-image:url(images/heroheader_bg.gif);">
+<header class="heroheader" id="first" style="background-image:url(images/heroheader_bg.gif);">
   <div class="inner">
     <h1 class="text__title--lg webfont" data-animations="fadein">essenceUI</h1>
     <div class="next next--circle sprite" data-speed="-1.5" data-offsety="100"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
@@ -132,37 +132,14 @@ Ryo Inagaki
 <script src="dist/jquery.essence_drawermenu.js"></script>
 <script src="dist/jquery.essence_heroheader.js"></script>
 <script src="dist/jquery.essence_animations.js"></script>
-<!-- <script src="dist/jquery.essence_parallax.js"></script> -->
+<script src="dist/jquery.essence_parallax.js"></script>
 <script>
 $(function(){
-  $(function() {
-  var $window = $(window);
-
-  $('.heroheader').each(function(index) {
-      var $self = $(this);
-      var offsetCoords = $self.offset();
-
-      $(window).scroll(function() {
-        // If this section is in view
-        if (($window.scrollTop() + $window.height()) > offsetCoords.top && ((offsetCoords.top + $self.height()) > $window.scrollTop())) {
-          var yPos = -($window.scrollTop() / 8);
-          if ($self.attr('id') != 'first') {
-            yPos += 126;
-          }
-          var coords = '50%' + yPos + 'px';
-          $self.css('backgroundPosition', coords);
-
-          $('.sprite', $self).each(function(index) {
-            var $sprite = $(this);
-            var yPos = -($window.scrollTop() / $sprite.data('speed')) + $sprite.data('offsety');
-            $sprite.css('top', yPos);
-          });
-        }
-      });
-    });
-  });
 
   essence_animations();
+  $('.heroheader').essence_parallax({
+    'speed':4,
+  });
   $('#drawermenu').essence_drawermenu({
     'header_menu_color':'#FFF',
     'header_menu_bgcolor':'#1b3e57',
