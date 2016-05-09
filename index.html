@@ -1,35 +1,177 @@
 <!doctype html>
 <html>
   <head>
-    <title>essence-ui</title>
+    <title>essenceUI</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="dist/essence_drawermenu.css'; ?>" type="text/css" media="all" />
-    <link rel="stylesheet" href="dist/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="dist/essence_drawermenu.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="dist/essence_heroheader.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <style type="text/css">.webfont {font-family: 'Questrial', sans-serif;}</style>
   </head>
 <body>
+
+<!--
+============================================================
+
+I'm sorry in a BEM naming!
+
+============================================================
+
+essence UI ver 0.0.01
+
+ESSENCE WEB SERVICE
+Ryo Inagaki
+
+============================================================
+-->
+
+<header class="heroheader" style="background-image:url(images/heroheader_bg.gif);">
+  <div class="inner">
+    <h1 class="text__title--lg webfont" data-animations="fadein">essenceUI</h1>
+    <div class="next next--circle sprite" data-speed="-1.5" data-offsety="100"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+  </div>
+</header>
+
+<section class="container">
+  <div id="jump-getstarted" class="separate__bottom" style="padding-top:50px;">
+    <article class="contents">
+      <h2 style="text-align:center;">Very easy and quickly</h2>
+      <p style="text-align:center;">This product will possess a lot of function.</p>
+      <div class="block">
+        <div class="row">
+          <div class="col__sm--4" data-animations="fadein" data-timing="scroll">
+            <h3>HTML5</h3>
+            <p>Using HTML5.Adopted the Semantic Web.</p>
+          </div>
+          <div class="col__sm--4" data-animations="fadein" data-timing="scroll">
+            <h3>CSS3</h3>
+            <p>Using CSS3.Simple and dynamic design.</p>
+          </div>
+          <div class="col__sm--4" data-animations="fadein" data-timing="scroll">
+            <h3>jQuery</h3>
+            <p>Adopted jQuery, uses its own jQuery plugins.</p>
+          </div>
+          <div class="col__sm--4" data-animations="fadein" data-timing="scroll">
+            <h3>Responsive</h3>
+            <p>It has adopted the grid system of the same width as the Bootstrap4.</p>
+          </div>
+          <div class="col__sm--4" data-animations="fadein" data-timing="scroll">
+            <h3>Gridsystem</h3>
+            <p>It has adopted the grid system of the same width as the Bootstrap4.</p>
+          </div>
+          <div class="col__sm--4" data-animations="fadein" data-timing="scroll">
+            <h3>SEO</h3>
+            <p>This framework has been created specifically for SEO.</p>
+          </div>
+          <div class="col__sm--4" data-animations="fadein" data-timing="scroll">
+            <h3>Hero header</h3>
+            <p>You can easily set up a Heroheader of the full screen.</p>
+          </div>
+          <div class="col__sm--4" data-animations="fadein" data-timing="scroll">
+            <h3>Drawer menu</h3>
+            <p>You can easily use the drawer menu,such as a native app.</p>
+          </div>
+          <div class="col__sm--4" data-animations="fadein" data-timing="scroll">
+            <h3>BEM</h3>
+            <p>When you try out once...<br />about <a href="https://en.bem.info/">BEM</a>.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
 <nav id="drawermenu" data-toggle="close">
-  <div class="header_menu">
-    <h1 class="brand"><a href="#">essenceUI</a></h1>
-    <div class="toggle_button">
-      <div class="hamburger">
-        <span class="top"></span>
-        <span class="middle"></span>
-        <span class="bottom"></span>
+  <div class="headermenu">
+    <div class="container">
+      <div class="row">
+        <div class="col__sm--12">
+          <h2 class="brand"><a href="#">essenceUI</a></h2>
+          <div class="toggle">
+            <div class="hamburger">
+              <span class="top"></span>
+              <span class="middle"></span>
+              <span class="bottom"></span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="slider_menu">Menu</div>
+  <div class="slidermenu">
+    <ul>
+      <li>
+        <a href="contents/doc.html"><i class="fa fa-book" aria-hidden="true"></i>Documents</a>
+        <ul>
+          <li><a href="contents/doc.html#jump-drawermenu"><i class="fa fa-angle-right" aria-hidden="true"></i>Drawer menu</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="inline"><button type="button" class="btn btn--ghost btn--block btn__menu--close">Close</button></div>
+  </div>
   <div class="overlay"></div>
 </nav>
+
+<div class="footermenu">
+  <div class="container">
+    <div class="row">
+      <div class="col__sm--6">aA1</div>
+      <div class="col__sm--5">aA2</div>
+      <div class="col__sm--1">aX3</div>
+    </div>
+  </div>
+</div>
+
+<div id="scrollValue" style="display:block;position:fixed;left:0;top:300px;background-color:#d6d6d6;color:#000;"></div>
+
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-<script src="dist/jquery.essence_drawermenu.js'; ?>"></script>
+<script src="dist/jquery.essence_drawermenu.js"></script>
+<script src="dist/jquery.essence_heroheader.js"></script>
+<script src="dist/jquery.essence_animations.js"></script>
+<!-- <script src="dist/jquery.essence_parallax.js"></script> -->
 <script>
 $(function(){
+  $(function() {
+  var $window = $(window);
+
+  $('.heroheader').each(function(index) {
+      var $self = $(this);
+      var offsetCoords = $self.offset();
+
+      $(window).scroll(function() {
+        // If this section is in view
+        if (($window.scrollTop() + $window.height()) > offsetCoords.top && ((offsetCoords.top + $self.height()) > $window.scrollTop())) {
+          var yPos = -($window.scrollTop() / 8);
+          if ($self.attr('id') != 'first') {
+            yPos += 126;
+          }
+          var coords = '50%' + yPos + 'px';
+          $self.css('backgroundPosition', coords);
+
+          $('.sprite', $self).each(function(index) {
+            var $sprite = $(this);
+            var yPos = -($window.scrollTop() / $sprite.data('speed')) + $sprite.data('offsety');
+            $sprite.css('top', yPos);
+          });
+        }
+      });
+    });
+  });
+
+  essence_animations();
   $('#drawermenu').essence_drawermenu({
     'header_menu_color':'#FFF',
-    'header_menu_bgcolor':'#2b2b2b'
+    'header_menu_bgcolor':'#1b3e57',
+    'slider_menu_color':'#FFF',
+    'slider_menu_bgcolor':'#183041'
+  });
+  $('.heroheader').essence_heroheader({
+    'difference_height':$('.headermenu').height(),
+    'heroheader_color':'#FFF'
   });
 });
 </script>

@@ -7,12 +7,13 @@ $.fn.essence_drawermenu = function(options){
     slider_menu_color:"#FFF",
     slider_menu_bgcolor:"#000"
   };
-  var setting = $.extend(defaults,options);
+  var set = $.extend(defaults,options);
   var wrapper = this;
-  var slider_menu = $(wrapper).children('.slider_menu');
-  var header_menu = $(wrapper).children('.header_menu');
-  var toggle_button = $(wrapper).children('.header_menu').children('.toggle_button');
-  var hamburger = $(wrapper).children('.header_menu').children('.toggle_button').children('.hamburger');
+  var slider_menu = $(wrapper).children('.slidermenu');
+  var close_button = $(wrapper).children('.slidermenu').find('.btn__menu--close');
+  var header_menu = $(wrapper).children('.headermenu');
+  var toggle_button = $(wrapper).children('.headermenu').find('.toggle');
+  var hamburger = $(wrapper).children('.headermenu').find('.hamburger');
   var overlay = $(wrapper).children('.overlay');
 
   // Function
@@ -64,13 +65,21 @@ $.fn.essence_drawermenu = function(options){
   else{var slider_height = body_height;}
   $(slider_menu).height(slider_height);
   $(overlay).height(slider_height);
-  if(setting.header_menu_color != ''){$(header_menu).css('color',setting.header_menu_color);}
-  if(setting.header_menu_bgcolor != ''){$(header_menu).css('background-color',setting.header_menu_bgcolor);}
-  if(setting.slider_menu_color != ''){$(slider_menu).css('color',setting.slider_menu_color);}
-  if(setting.slider_menu_bgcolor != ''){$(slider_menu).css('background-color',setting.slider_menu_bgcolor);}
+  var header_menu_height = $(header_menu).height();
+  $('body').css('padding-top',header_menu_height);
+  if(set.header_menu_color != ''){$(header_menu).css('color',set.header_menu_color);}
+  if(set.header_menu_bgcolor != ''){$(header_menu).css('background-color',set.header_menu_bgcolor);}
+  if(set.slider_menu_color != ''){$(slider_menu).css('color',set.slider_menu_color);}
+  if(set.slider_menu_bgcolor != ''){$(slider_menu).css('background-color',set.slider_menu_bgcolor);}
 
   // Action Open
   $(overlay).click(function() {
+    var toggle = $(wrapper).data('toggle');
+    if(toggle == 'open'){
+      drawermenu_close();
+    }
+  });
+  $(close_button).click(function() {
     var toggle = $(wrapper).data('toggle');
     if(toggle == 'open'){
       drawermenu_close();

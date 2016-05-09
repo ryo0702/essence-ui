@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import "compass";
 
-.header_menu {
+.headermenu {
   z-index:5;
   position: fixed;
   width:100%;
@@ -14,16 +14,14 @@
     float: left;
     font-size:18px;
     line-height: 50px;
-    margin-left:20px;
     a {
       text-decoration: none;
       color:#FFF;
     }
   }
-  .toggle_button {
+  .toggle {
     float: right;
     cursor: pointer;
-    margin-right:20px;
     z-index:10;
     .hamburger {
       transform-origin:center;
@@ -60,7 +58,7 @@
     }
   }
 }
-.slider_menu {
+.slidermenu {
   display: none;
   max-width:90%;
   width:300px;
@@ -69,6 +67,38 @@
   top:0;
   left:0;
   @include box-shadow(3px 0 5px 1px rgba(#000,0.2));
+  & > .inline {
+    padding:20px;
+  }
+  & > ul {
+    list-style:none;
+    padding: 0;
+    margin: 20px;
+    & > li {
+      font-size:15px;
+      a {
+        display: block;
+        text-decoration: none;
+        color:#FFF;
+      }
+      i {
+        margin-right:15px;
+      }
+      & > ul {
+        list-style:none;
+        padding: 0;
+        margin: 10px 20px;
+        & > li {
+          font-size:13px;
+          a {
+            display: block;
+            text-decoration: none;
+            color:#FFF;
+          }
+        }
+      }
+    }
+  }
 }
 .overlay {
   display: none;

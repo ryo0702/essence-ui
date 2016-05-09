@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+  <head>
+    <title>essenceUI</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/essence_drawermenu.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="dist/essence_heroheader.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  </head>
+<body>
+
+<!--
+==============================
+
+I'm sorry in a BEM naming!
+
+==============================
+-->
+
+<header class="heroheader" style="background-image:url(images/heroheader_bg.jpg);">
+  <div class="inner">
+    <h1 class="text__title--lg">essenceUI</h1>
+    <div class="next next--circle"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+  </div>
+</header>
+
+<nav id="drawermenu" data-toggle="close">
+  <div class="headermenu">
+    <div class="container">
+      <div class="row">
+        <div class="col__sm--12">
+          <h2 class="brand"><a href="#">essenceUI</a></h2>
+          <div class="toggle">
+            <div class="hamburger">
+              <span class="top"></span>
+              <span class="middle"></span>
+              <span class="bottom"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slidermenu">
+    <ul>
+      <li>
+        <a href="#"><i class="fa fa-book" aria-hidden="true"></i>Documents</a>
+        <ul>
+          <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Documents</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="inline"><button type="button" class="btn btn--ghost btn--block btn__menu--close">Close</button></div>
+  </div>
+  <div class="overlay"></div>
+</nav>
+
+<div style="height:1000px;"></div>
+
+<div class="footermenu">
+  <div class="container">
+    <div class="row">
+      <div class="col__sm--6">aA1</div>
+      <div class="col__sm--5">aA2</div>
+      <div class="col__sm--1">aX3</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script src="dist/jquery.essence_drawermenu.js"></script>
+<script src="dist/jquery.essence_heroheader.js"></script>
+<script>
+$(function(){
+  $('#drawermenu').essence_drawermenu({
+    'header_menu_color':'#FFF',
+    'header_menu_bgcolor':'#1b3e57',
+    'slider_menu_color':'#FFF',
+    'slider_menu_bgcolor':'#183041'
+  });
+  $('.heroheader').essence_heroheader({
+    'difference_height':$('.headermenu').height(),
+    'heroheader_color':'#FFF'
+  });
+});
+</script>
+</body>
+</html>
