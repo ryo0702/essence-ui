@@ -8,7 +8,7 @@
     <meta name="description" content="Mobile first frontend framework.">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="dist/essence_ui.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://cdn.rawgit.com/ryo0702/essence-ui/master/dist/essence_ui.css" type="text/css" media="all" />
     <link rel="stylesheet" href="style.css" type="text/css" media="all" />
     <style type="text/css">.webfont {font-family: 'Questrial', sans-serif;}</style>
   </head>
@@ -27,11 +27,11 @@ Ryo Inagaki
 
 ============================================================
 -->
-
 <div class="tab__area" data-tabarea-default="true" data-tabarea="home">
+
 <header class="heroheader" id="first" style="background-image:url(images/heroheader_bg.gif);">
   <div class="inner">
-    <div data-animations="sliding"><a href="index.html"><img class="logo" id="logo_image" src="http://ryo0702.github.io/essence-ui/images/heroimage_logo.png" style="max-width:100%;"></a></div>
+    <div data-animations="sliding"><a href="index.html"><img class="logo" id="logo_image" src="./images/heroimage_logo.png" style="max-width:100%;"></a></div>
     <div class="next next--circle" data-animations="fadein" data-speed="2500"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
   </div>
 </header>
@@ -136,7 +136,7 @@ Ryo Inagaki
   <div style="margin-bottom:80px;">
     <article class="contents">
       <h2 class="webfont text_3deffect text_3deffect--sm text__title text__title--lg text__align--center" style="margin-bottom:20px;">Contact</h2>
-      <div class="card card--md card--center card--radius block--shadow--float">
+      <div class="card card--center card--radius block--shadow--float">
         <div class="card__block--lg">
           <form method="post" action="" class="forms contactus">
             <div class="validation" style="margin-bottom:20px;"></div>
@@ -175,18 +175,7 @@ Ryo Inagaki
 </section>
 </div>
 
-<div class="tabarea" data-tabarea="config">xxx</div>
-
-<div id="footer" class="footermenu" style="background-image:url(images/footer_bg.jpeg);background-position:bottom;">
-  <div class="container">
-    <div class="text__align--center">
-      <h2 class="text__title--lg"><a href="index.html"><img id="logo_image" src="images/heroimage_logo.png" style="width:180px;max-width:100%;height:auto;"></a></h2>
-      <p class="text--xs"></p>
-      <p class="text--xs">Copyright © 2016 ESSENCE WEB SERVICE. All Right Reserved.<br />
-      The MIT License.</p>
-    </div>
-  </div>
-</div>
+<div class="tabarea" data-tabarea="config"></div>
 
 <!--
 ============================================================
@@ -244,13 +233,22 @@ Ryo Inagaki
   </div>
 </div>
 
+<div id="footer" class="footermenu" style="background-image:url(images/heroheader_bg.gif);">
+  <div class="container">
+    <div class="text__align--center">
+      <h2 class="text__title--lg"><a href="index.html"><img id="logo_image" src="images/heroimage_logo.png" style="width:180px;max-width:100%;height:auto;"></a></h2>
+      <p class="text--xs"></p>
+      <p class="text--xs">Copyright © 2016 ESSENCE WEB SERVICE. All Right Reserved.<br />
+      The MIT License.</p>
+    </div>
+  </div>
+</div>
+
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-<script src="dist/essence_ui.js"></script>
+<script src="https://rawgit.com/ryo0702/essence-ui/master/dist/essence_ui.js"></script>
 <script>
 $(function(){
-
   loading_screen();
-
   $('.heroheader').essence_parallax({
     'speed':4,
   });
