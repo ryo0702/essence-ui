@@ -257,6 +257,13 @@ function essence_animations (){
     },speed);
   }
 
+  function animations_type_fadein(this_animations){
+    var speed = animations_speed(this_animations);
+    $(this_animations).animate({
+      opacity:1
+    },speed);
+  }
+
   $('[data-animations]').each(function() {
     var this_animations = this;
     var this_timing = $(this_animations).data('timing');
@@ -275,11 +282,14 @@ function essence_animations (){
         var scroll_top = $(window).scrollTop();
         if (scroll_top > this_position_top_plus){
           if(animations_type == 'fadein'){animations_type_fadein(this_animations);}
+          else if(animations_type == 'sliding'){}
         }
       });
     }
     else{
       if(animations_type == 'fadein'){animations_type_fadein(this_animations);}
+      else if(animations_type == 'sliding'){
+      }
     }
   });
 
