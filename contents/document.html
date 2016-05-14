@@ -30,7 +30,7 @@ Ryo Inagaki
 <div class="tab__area" data-tabarea-default="true" data-tabarea="home">
 <header class="heroheader" id="first" style="background-image:url(../images/heroheader_bg.gif);">
   <div class="inner">
-    <h1 class="webfont" style="font-size:60px;text-align:center;line-height: 62px;padding:0;margin:0;">Docments</h1>
+    <h1 class="webfont text_3deffect text__title text__title--lg text__align--center">Docments</h1>
     <div style="font-size:13px;text-align:center;">essenceUI documents.</div>
   </div>
 </header>
@@ -39,7 +39,7 @@ Ryo Inagaki
 
   <div id="jump-getstarted" class="separate__bottom" style="padding-top:50px;">
     <article class="contents">
-      <h2 class="webfont" style="text-align:center;" data-animations="fadein" data-timing="scroll">Get started</h2>
+      <h2 class="webfont text_3deffect text_3deffect--sm text__title text__title--lg text__align--center" data-animations="fadein" data-timing="scroll">Get started</h2>
       <div class="block">
         <h3>Donwload</h3>
         <p>esssenceUI download quickly get started.</p>
@@ -47,23 +47,94 @@ Ryo Inagaki
       </div>
       <div class="block">
         <h3>Load CSS and Js</h3>
-        <p>Load CSS and JS.</p>
+        <p>Include this code in the head.essenceUI uses the FontAwesome and jQuery.</p>
         <pre>
         <code>
-          &lt;!doctype html>
-          &lt;html>
-            &lt;head>
-              &lt;link rel="stylesheet" href="essence_ui.css" type="text/css" media="all" />
-              &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
-              &lt;link rel="stylesheet" href="../style.css" type="text/css" media="all" />
-              &lt;script src="https://code.jquery.com/jquery-2.2.3.min.js">&lt;/script>
-              &lt;script src="essence_ui.js">&lt;/script>
-          &lt;/head>
-          &lt;body>
-          &lt;/body>
-          &lt;/html>
+&lt;link rel="stylesheet" href="essence_ui.css" type="text/css" media="all" />
+&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+&lt;script src="https://code.jquery.com/jquery-2.2.3.min.js">&lt;/script>
+&lt;script src="essence_ui.js">&lt;/script>
         </code>
         </pre>
+      </div>
+    </article>
+  </div>
+
+  <div id="jump-style" class="separate__bottom" style="padding-top:50px;">
+    <article class="contents">
+      <h2 class="webfont text_3deffect text_3deffect--sm text__title text__title--lg text__align--center" style="text-align:center;" data-animations="fadein" data-timing="scroll">Style</h2>
+      <div class="block">
+        <h3>Container and Grid</h3>
+        <p>[.container] and [.container--fluid] are done responsive centering.<br />
+        [.row] and [.row--0][.row--xs]...and more,summarizes the column.<br />
+      column class is coding in BEM, but it is the same as the Bootstrap is in use.</p>
+        <div style="margin-top:30px;">
+          <pre>
+          <code>
+&lt;div class="container">
+  &lt;div class="row">
+    &lt;div class="col__md--4">md4&lt;/div>
+    &lt;div class="col__md--8">md8&lt;/div>
+  &lt;/div>
+  &lt;div class="row row--0">
+    &lt;div class="col__sm--2">sm2&lt;/div>
+    &lt;div class="col__sm--6">sm6&lt;/div>
+    &lt;div class="col__sm--4">sm4&lt;/div>
+  &lt;/div>
+&lt;/div>
+&lt;div class="container--fluid">
+  &lt;div class="col__xs--6">xs6&lt;/div>
+  &lt;div class="col__xs--6">xs6&lt;/div>
+&lt;/div>
+          </code>
+          </pre>
+        </div>
+      </div>
+      <div class="block">
+        <h3>Text align</h3>
+        <p>[.text_align---xxx] class will align the text .</p>
+        <div style="margin-top:30px;">
+          <pre>
+          <code>
+&lt;p class="text__align--center">center&lt;/p>
+&lt;p class="text__align--left">left&lt;/p>
+&lt;p class="text__align--right">right&lt;/p>
+          </code>
+          </pre>
+        </div>
+      </div>
+      <div class="block">
+        <h3>Title</h3>
+        <p>Class such as the settings for the title and title size.</p>
+        <div style="margin-top:30px;">
+          <pre>
+          <code>
+&lt;h2 class="text__title">text__title&lt;/h2>
+&lt;h2 class="text__title text__title--xs">text__title--xs&lt;/h2>
+&lt;h2 class="text__title text__title--sm">text__title--sm&lt;/h2>
+&lt;h2 class="text__title text__title--md">text__title--md&lt;/h2>
+&lt;h2 class="text__title text__title--lg">text__title--lg&lt;/h2>
+&lt;h2 class="text__title text__title--xl">text__title--xl&lt;/h2>
+          </code>
+          </pre>
+        </div>
+      </div>
+      <div class="block">
+        <h3>Card</h3>
+        <p>This class will adapt the card design.</p>
+        <div style="margin-top:30px;">
+          <pre>
+          <code>
+&lt;div class="card card--md card--center">
+  &lt;div class="card__header card__header--md">header&lt;/div>
+  &lt;div class="card__block--md">contents&lt;/div>
+&lt;/div>
+&lt;div class="card card--dark">
+  &lt;div class="card__block--md">contents&lt;/div>
+&lt;/div>
+          </code>
+          </pre>
+        </div>
       </div>
     </article>
   </div>
@@ -102,10 +173,10 @@ Ryo Inagaki
   <div class="slidermenu">
     <ul>
       <li>
-        <a href="../contents/document"><i class="fa fa-book" aria-hidden="true"></i>Documents</a>
+        <a href="#"><i class="fa fa-book" aria-hidden="true"></i>Documents</a>
         <ul>
-          <li><a href="contents/document#jump-getstarted"><i class="fa fa-angle-right" aria-hidden="true"></i>Get started</a></li>
-          <li><a href="contents/document#jump-drawermenu"><i class="fa fa-angle-right" aria-hidden="true"></i>Drawer menu</a></li>
+          <li><a href="#jump-getstarted"><i class="fa fa-angle-right" aria-hidden="true"></i>Get started</a></li>
+          <li><a href="#jump-style"><i class="fa fa-angle-right" aria-hidden="true"></i>Style</a></li>
         </ul>
       </li>
     </ul>
@@ -140,33 +211,6 @@ $(function(){
 
   loading_screen();
 
-  $(function(){
-    setInterval(function(){
-      setTimeout(function(){
-        $('#logo_image').animate({
-          opacity:0
-        },10).attr({src:'../images/heroimage_logo_ani1.png'}).animate({
-          opacity:1
-        },50)
-      },500);
-      setTimeout(function(){
-        $('#logo_image').animate({
-          opacity:0
-        },10).attr({src:'../images/heroimage_logo_ani2.png'}).animate({
-          opacity:1
-        },50)
-      },500);
-      setTimeout(function(){
-        $('#logo_image').animate({
-          opacity:0
-        },10).attr({src:'../images/heroimage_logo.png'}).animate({
-          opacity:1
-        },50)
-      },500);
-    },3000);
-  });
-
-  essence_animations();
   $('.heroheader').essence_parallax({
     'speed':4,
   });

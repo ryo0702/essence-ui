@@ -48,33 +48,23 @@ code {
 }
 .text__title--xs {
   font-size:16px;
-  margin: 0;
-  padding: 0;
-  line-height: 50px;
+  line-height: 16px;
 }
 .text__title--sm {
   font-size:20px;
-  margin: 0;
-  padding: 0;
-  line-height: 50px;
+  line-height: 20px;
 }
 .text__title--md {
   font-size:35px;
-  margin: 0;
-  padding: 0;
-  line-height: 50px;
+  line-height: 35px;
 }
 .text__title--lg {
   font-size:50px;
-  margin: 0;
-  padding: 0;
   line-height: 50px;
 }
 .text__title--xl {
   font-size:75px;
-  margin: 0;
-  padding: 0;
-  line-height: 50px;
+  line-height: 75px;
 }
 
 .text__align--center {
@@ -91,4 +81,12 @@ code {
 
 .text__shadow {
   @include text-shadow(0 1px 1px rgba(#000,0.15));
+}
+
+.text_3deffect {
+  @include text-shadow(6px 0px 0px rgba(#ff0000, 0.5),1px 0px 0px rgba(#000, 0.5),-6px 0px 0px rgba(#009cff, 0.5));
+}
+
+.text_3deffect--sm {
+  @include text-shadow(3px 0px 0px rgba(#ff0000, 0.3),1px 0px 0px rgba(#000, 0.3),-3px 0px 0px rgba(#009cff, 0.3));
 }

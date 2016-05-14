@@ -72,7 +72,7 @@
   }
 }
 
-.row--xsmall {
+.row--xs {
   margin-right: -.2142rem;
  margin-left: -.2142rem;
   & > [class*='col-'] {
@@ -81,7 +81,7 @@
   }
 }
 
-.row--small {
+.row--sm {
   margin-right: -.4285rem;
  margin-left: -.4285rem;
   & > [class*='col-'] {
@@ -90,7 +90,7 @@
   }
 }
 
-.row--large {
+.row--lg {
   margin-right: -1.571rem;
  margin-left: -1.571rem;
   & > [class*='col-'] {
