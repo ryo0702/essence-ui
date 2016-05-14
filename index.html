@@ -30,7 +30,7 @@ Ryo Inagaki
 <div class="tab__area" data-tabarea-default="true" data-tabarea="home">
 <header class="heroheader" id="first" style="background-image:url(images/heroheader_bg.gif);">
   <div class="inner">
-    <div data-animations="fadein"><a href="index.html"><img id="logo_image" src="images/heroimage_logo.png" style="max-width:100%;height:auto;"></a></div>
+    <div data-animations="fadein"><a href="index.html"><img class="logo" id="logo_image" src="http://ryo0702.github.io/essence-ui/images/heroimage_logo.png" style="max-width:100%;"></a></div>
     <div class="next next--circle" data-animations="fadein" data-speed="2500"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
   </div>
 </header>
@@ -239,37 +239,12 @@ Ryo Inagaki
 </div>
 
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-<script src="http://ryo0702.github.io/essence-ui/dist/essence_ui.js"></script>
+<script src="dist/essence_ui.js"></script>
 <script>
 $(function(){
 
-  // loading_screen();
+  loading_screen();
 
-  $(function(){
-    setInterval(function(){
-      setTimeout(function(){
-        $('#logo_image').animate({
-          opacity:0
-        },10).attr({src:'images/heroimage_logo_ani1.png'}).animate({
-          opacity:1
-        },50)
-      },500);
-      setTimeout(function(){
-        $('#logo_image').animate({
-          opacity:0
-        },10).attr({src:'images/heroimage_logo_ani2.png'}).animate({
-          opacity:1
-        },50)
-      },500);
-      setTimeout(function(){
-        $('#logo_image').animate({
-          opacity:0
-        },10).attr({src:'images/heroimage_logo.png'}).animate({
-          opacity:1
-        },50)
-      },500);
-    },3000);
-  });
   $('.heroheader').essence_parallax({
     'speed':4,
   });
