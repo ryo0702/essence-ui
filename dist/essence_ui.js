@@ -261,6 +261,7 @@ function essence_animations (){
   return true;
 
 }
+essence_animations();
 
 
 
