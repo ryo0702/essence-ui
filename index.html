@@ -5,15 +5,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="dist/essence_drawermenu.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="dist/essence_heroheader.css" type="text/css" media="all" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="dist/essence_ui.css" type="text/css" media="all" />
     <link rel="stylesheet" href="style.css" type="text/css" media="all" />
     <style type="text/css">.webfont {font-family: 'Questrial', sans-serif;}</style>
   </head>
 <body>
-
 <!--
 ============================================================
 
@@ -29,68 +27,172 @@ Ryo Inagaki
 ============================================================
 -->
 
+<div class="tab__area" data-tabarea-default="true" data-tabarea="home">
 <header class="heroheader" id="first" style="background-image:url(images/heroheader_bg.gif);">
   <div class="inner">
-    <h1 class="text__title--lg webfont" data-animations="fadein">essenceUI</h1>
-    <div class="next next--circle sprite" data-speed="-1.5" data-offsety="100"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+    <div data-animations="fadein"><a href="index.html"><img id="logo_image" src="images/heroimage_logo.png" style="max-width:100%;height:auto;"></a></div>
+    <div class="next next--circle" data-animations="fadein" data-speed="2500"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
   </div>
 </header>
 
 <section class="container">
-  <div id="jump-getstarted" class="separate__bottom" style="padding-top:50px;">
+
+  <div class="separate__bottom" style="padding-top:50px;">
     <article class="contents">
-      <h2 style="text-align:center;">Very easy and quickly</h2>
-      <p style="text-align:center;">This product will possess a lot of function.</p>
+      <h2 class="webfont" style="text-align:center;" data-animations="fadein" data-timing="scroll">Very easy and quickly</h2>
+      <p style="text-align:center;" data-animations="fadein" data-timing="scroll">This product will possess a lot of function.</p>
       <div class="block">
-        <div class="row">
-          <div class="col__sm--4" data-animations="fadein" data-timing="scroll">
-            <h3>HTML5</h3>
-            <p>Using HTML5.Adopted the Semantic Web.</p>
+        <div class="row alignheights">
+          <div class="col__sm--4 text__align--center" data-alignheights="children" data-animations="fadein" data-timing="scroll" style="margin-bottom:25px;">
+            <h3 style="margin:0;padding:0;">HTML5</h3>
+            <p class="text--12px" style="margin:0;padding:0;">Using HTML5.Adopted the Semantic Web.</p>
           </div>
-          <div class="col__sm--4" data-animations="fadein" data-timing="scroll">
-            <h3>CSS3</h3>
-            <p>Using CSS3.Simple and dynamic design.</p>
+          <div class="col__sm--4 text__align--center" data-alignheights="children" data-animations="fadein" data-timing="scroll" style="margin-bottom:25px;">
+            <h3 style="margin:0;padding:0;">CSS3</h3>
+            <p class="text--12px" style="margin:0;padding:0;">Using CSS3.Simple and dynamic design.</p>
           </div>
-          <div class="col__sm--4" data-animations="fadein" data-timing="scroll">
-            <h3>jQuery</h3>
-            <p>Adopted jQuery, uses its own jQuery plugins.</p>
+          <div class="col__sm--4 text__align--center" data-alignheights="children" data-animations="fadein" data-timing="scroll" style="margin-bottom:25px;">
+            <h3 style="margin:0;padding:0;">jQuery</h3>
+            <p class="text--12px" style="margin:0;padding:0;">Adopted jQuery, uses its own jQuery plugins.</p>
           </div>
-          <div class="col__sm--4" data-animations="fadein" data-timing="scroll">
-            <h3>Responsive</h3>
-            <p>It has adopted the grid system of the same width as the Bootstrap4.</p>
+          <div class="col__sm--4 text__align--center" data-alignheights="children" data-animations="fadein" data-timing="scroll" style="margin-bottom:25px;">
+            <h3 style="margin:0;padding:0;">Responsive</h3>
+            <p class="text--12px" style="margin:0;padding:0;">This site can be displayed in a variety of devices responsive.</p>
           </div>
-          <div class="col__sm--4" data-animations="fadein" data-timing="scroll">
-            <h3>Gridsystem</h3>
-            <p>It has adopted the grid system of the same width as the Bootstrap4.</p>
+          <div class="col__sm--4 text__align--center" data-alignheights="children" data-animations="fadein" data-timing="scroll" style="margin-bottom:25px;">
+            <h3 style="margin:0;padding:0;">Gridsystem</h3>
+            <p class="text--12px" style="margin:0;padding:0;">It has adopted the grid system of the same width as the Bootstrap4.</p>
           </div>
-          <div class="col__sm--4" data-animations="fadein" data-timing="scroll">
-            <h3>SEO</h3>
-            <p>This framework has been created specifically for SEO.</p>
+          <div class="col__sm--4 text__align--center" data-alignheights="children" data-animations="fadein" data-timing="scroll" style="margin-bottom:25px;">
+            <h3 style="margin:0;padding:0;">Align height</h3>
+            <p class="text--12px" style="margin:0;padding:0;">Align the height of the element.</p>
           </div>
-          <div class="col__sm--4" data-animations="fadein" data-timing="scroll">
-            <h3>Hero header</h3>
-            <p>You can easily set up a Heroheader of the full screen.</p>
+          <div class="col__sm--4 text__align--center" data-alignheights="children" data-animations="fadein" data-timing="scroll" style="margin-bottom:25px;">
+            <h3 style="margin:0;padding:0;">SEO</h3>
+            <p class="text--12px" style="margin:0;padding:0;">This framework has been created specifically for SEO.</p>
           </div>
-          <div class="col__sm--4" data-animations="fadein" data-timing="scroll">
-            <h3>Drawer menu</h3>
-            <p>You can easily use the drawer menu,such as a native app.</p>
+          <div class="col__sm--4 text__align--center" data-alignheights="children" data-animations="fadein" data-timing="scroll" style="margin-bottom:25px;">
+            <h3 style="margin:0;padding:0;">Hero header</h3>
+            <p class="text--12px" style="margin:0;padding:0;">You can easily set up a Heroheader of the full screen.</p>
           </div>
-          <div class="col__sm--4" data-animations="fadein" data-timing="scroll">
-            <h3>BEM</h3>
-            <p>When you try out once...<br />about <a href="https://en.bem.info/">BEM</a>.</p>
+          <div class="col__sm--4 text__align--center" data-alignheights="children" data-animations="fadein" data-timing="scroll" style="margin-bottom:25px;">
+            <h3 style="margin:0;padding:0;">Drawer menu</h3>
+            <p class="text--12px" style="margin:0;padding:0;">You can easily use the drawer menu,such as a native app.</p>
+          </div>
+          <div class="col__sm--4 text__align--center" data-alignheights="children" data-animations="fadein" data-timing="scroll">
+            <h3 style="margin:0;padding:0;">Parallax</h3>
+            <p class="text--12px" style="margin:0;padding:0;">Dynamic performance using the scroll effects and parallax.</p>
+          </div>
+          <div class="col__sm--4 text__align--center" data-alignheights="children" data-animations="fadein" data-timing="scroll">
+            <h3 style="margin:0;padding:0;">Validation</h3>
+            <p class="text--12px" style="margin:0;padding:0;">Contact form with validation function.Required items,e-mail address,such as the length of the text and more.</p>
+          </div>
+          <div class="col__sm--4 text__align--center" data-alignheights="children" data-animations="fadein" data-timing="scroll">
+            <h3 style="margin:0;padding:0;">BEM</h3>
+            <p class="text--12px" style="margin:0;padding:0;">When you try out once...<br />about <a href="https://en.bem.info/">BEM</a>.</p>
           </div>
         </div>
       </div>
     </article>
   </div>
+
+  <div class="separate__bottom" style="padding-top:50px;">
+    <article class="contents">
+      <h2 class="webfont" style="text-align:center;margin-bottom:20px;" data-animations="fadein" data-timing="scroll">User reviews</h2>
+      <div class="card card--xl card--center card--radius block--shadow--float">
+        <div class="card__block--lg">
+          <div class="row alignheights">
+            <div class="col__sm--6" data-alignheights="children" data-animations="fadein" data-timing="scroll">
+              <div class="user__review">
+                <div class="user__review__thumb">
+                  <img src="https://pbs.twimg.com/profile_images/522010864816099328/0--UcQUh_400x400.jpeg" />
+                </div>
+                <div class="user__review__text">
+                  <div class="user__review__text__post">Sith Lord</div>
+                  <div class="user__review__text__title">Lord Darth Vader</div>
+                  <div class="user__review__text__comment">The Force is with you. </div>
+                </div>
+              </div>
+            </div>
+            <div class="col__sm--6" data-alignheights="children" data-animations="fadein" data-timing="scroll">
+              <div class="user__review">
+                <div class="user__review__thumb">
+                  <img src="https://pbs.twimg.com/profile_images/20052612/chewbacca_400x400.jpg" />
+                </div>
+                <div class="user__review__text">
+                  <div class="user__review__text__post">Wookiee</div>
+                  <div class="user__review__text__title">Chewbacca</div>
+                  <div class="user__review__text__comment">...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div style="margin-bottom:80px;">
+    <article class="contents">
+      <h2 class="webfont" style="text-align:center;margin-bottom:20px;">Contact</h2>
+      <div class="card card--md card--center card--radius block--shadow--float">
+        <div class="card__block--lg">
+          <form method="post" action="" class="forms contactus">
+            <div class="validation" style="margin-bottom:20px;"></div>
+            <fieldset data-required="true">
+              <legend><div>Name</div></legend>
+              <div class="input">
+                <input type="text" name="name" size="20" placeholder="Name">
+                <div class="comment">Comment is here.</div>
+              </div>
+            </fieldset>
+            <fieldset data-required="true">
+              <legend><div>Email</div></legend>
+              <div class="input">
+                <input type="email" name="email" size="20" placeholder="Email">
+              </div>
+            </fieldset>
+            <fieldset data-required="true">
+              <legend><div>Gender</div></legend>
+              <div class="input">
+                <select name="gender">
+                  <option value="">Select gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+            </fieldset>
+            <div class="submit">
+              <button type="button" name="send" value="on" class="btn btn__primary btn--radius btn__submit btn--lg">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </article>
+  </div>
+
 </section>
+</div>
+
+<div class="tabarea" data-tabarea="config">xxx</div>
+
+<div id="footer" class="footermenu" style="background-image:url(images/footer_bg.jpeg);background-position:bottom;">
+  <div class="container">
+    <div class="text__align--center">
+      <h2 class="text__title--lg"><a href="index.html"><img id="logo_image" src="images/heroimage_logo.png" style="width:180px;max-width:100%;height:auto;"></a></h2>
+      <p class="text--xs"></p>
+      <p class="text--xs">Copyright © 2016 ESSENCE WEB SERVICE. All Right Reserved.<br />
+      The MIT License.</p>
+    </div>
+  </div>
+</div>
 
 <nav id="drawermenu" data-toggle="close">
-  <div class="headermenu">
+  <div class="headermenu block--shadow--large">
     <div class="container">
       <div class="row">
         <div class="col__sm--12">
-          <h2 class="brand"><a href="#">essenceUI</a></h2>
+          <h2 class="brand webfont"><a href="index.html">essenceUI</a></h2>
           <div class="toggle">
             <div class="hamburger">
               <span class="top"></span>
@@ -105,50 +207,97 @@ Ryo Inagaki
   <div class="slidermenu">
     <ul>
       <li>
-        <a href="contents/doc.html"><i class="fa fa-book" aria-hidden="true"></i>Documents</a>
+        <a href="../contents/document.html"><i class="fa fa-book" aria-hidden="true"></i>Documents</a>
         <ul>
-          <li><a href="contents/doc.html#jump-drawermenu"><i class="fa fa-angle-right" aria-hidden="true"></i>Drawer menu</a></li>
+          <li><a href="contents/document.html#jump-getstarted"><i class="fa fa-angle-right" aria-hidden="true"></i>Get started</a></li>
+          <li><a href="contents/document.html#jump-drawermenu"><i class="fa fa-angle-right" aria-hidden="true"></i>Drawer menu</a></li>
         </ul>
       </li>
     </ul>
-    <div class="inline"><button type="button" class="btn btn--ghost btn--block btn__menu--close">Close</button></div>
+    <div class="inline"><button type="button" class="btn btn__ghost btn--block btn__menu--close">Close</button></div>
   </div>
   <div class="overlay"></div>
 </nav>
 
-<div class="footermenu">
-  <div class="container">
-    <div class="row">
-      <div class="col__sm--6">aA1</div>
-      <div class="col__sm--5">aA2</div>
-      <div class="col__sm--1">aX3</div>
-    </div>
+<div class="loading">
+  <i class="fa fa-repeat fa-spin" aria-hidden="true"></i>
+</div>
+
+<div id="tabbar" class="tabbar tabbar--essence tabbar--shadow tabbar--column--3">
+  <div class="tab" data-tab-click="tab" data-tab-select="home">
+    <div class="icon"><i class="fa fa-home" aria-hidden="true"></i></div>
+    <div class="title">Home</div>
+  </div>
+  <div class="tab" data-tab-click="link" data-tab-select="contents/document.html">
+    <div class="icon"><i class="fa fa-book" aria-hidden="true"></i></div>
+    <div class="title">Document</div>
+  </div>
+  <div class="tab" data-tab-click="tab" data-tab-select="config">
+    <div class="icon"><i class="fa fa-cog" aria-hidden="true"></i></div>
+    <div class="title">Config</div>
   </div>
 </div>
 
-<div id="scrollValue" style="display:block;position:fixed;left:0;top:300px;background-color:#d6d6d6;color:#000;"></div>
-
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-<script src="dist/jquery.essence_drawermenu.js"></script>
-<script src="dist/jquery.essence_heroheader.js"></script>
-<script src="dist/jquery.essence_animations.js"></script>
-<script src="dist/jquery.essence_parallax.js"></script>
+<script src="dist/essence_ui.js"></script>
 <script>
 $(function(){
+
+  loading_screen();
+
+  $(function(){
+    setInterval(function(){
+      setTimeout(function(){
+        $('#logo_image').animate({
+          opacity:0
+        },10).attr({src:'images/heroimage_logo_ani1.png'}).animate({
+          opacity:1
+        },50)
+      },500);
+      setTimeout(function(){
+        $('#logo_image').animate({
+          opacity:0
+        },10).attr({src:'images/heroimage_logo_ani2.png'}).animate({
+          opacity:1
+        },50)
+      },500);
+      setTimeout(function(){
+        $('#logo_image').animate({
+          opacity:0
+        },10).attr({src:'images/heroimage_logo.png'}).animate({
+          opacity:1
+        },50)
+      },500);
+    },3000);
+  });
 
   essence_animations();
   $('.heroheader').essence_parallax({
     'speed':4,
   });
+  $('.heroheader').essence_heroheader({
+    'heroheader_color':'#FFF'
+  });
+  $('.footermenu').essence_parallax({
+    'speed':10,
+  });
+  $('.alignheights').essence_alignheight({
+    'wrap_num':3,
+  });
   $('#drawermenu').essence_drawermenu({
+    'header_padding_top':false,
     'header_menu_color':'#FFF',
     'header_menu_bgcolor':'#1b3e57',
     'slider_menu_color':'#FFF',
-    'slider_menu_bgcolor':'#183041'
+    'slider_menu_bgcolor':'#183041',
+    'header_menu_animation':'slidedown',
   });
-  $('.heroheader').essence_heroheader({
-    'difference_height':$('.headermenu').height(),
-    'heroheader_color':'#FFF'
+  $('.contactus').essence_validation({
+    'error_message':'Error',
+    'success_message':'Thank you for sending the message.',
+  });
+  $('#tabbar').essence_tabbar({
+    'speed':4,
   });
 });
 </script>

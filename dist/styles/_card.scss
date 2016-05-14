@@ -1,0 +1,51 @@
+.card {
+  width:100%;
+  background-color: #FFF;
+  border:solid 1px #ededed;
+  box-sizing: border-box;
+  min-height:10px;
+  min-width:100px;
+  max-width:100%;
+}
+.card--center {
+  margin-left:auto;
+  margin-right:auto;
+}
+.card__block,.card__block--md {
+  padding:10px;
+}
+.card__block--xs {
+  padding:3px;
+}
+.card__block--sm {
+  padding:5px;
+}
+.card__block--lg {
+  padding:20px;
+}
+.card__block--xl {
+  padding:30px;
+}
+.card--radius {
+  @include border-radius(5px);
+}
+.card--xs,.card--sm,.card--md,.card--lg.card--xl {
+    width:100%;
+}
+@media (min-width: 992px) {
+  .card--xs {
+    width:15%!important;
+  }
+  .card--sm {
+    width:25%!important;
+  }
+  .card--md {
+    width:50%!important;
+  }
+  .card--lg {
+    width:75%!important;
+  }
+  .card--xl {
+    width:100%!important;
+  }
+}

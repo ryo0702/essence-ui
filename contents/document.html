@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+  <head>
+    <title>essenceUI</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../dist/essence_ui.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../style.css" type="text/css" media="all" />
+    <style type="text/css">.webfont {font-family: 'Questrial', sans-serif;}</style>
+  </head>
+<body>
+<!--
+============================================================
+
+I'm sorry in a BEM naming!
+
+============================================================
+
+essence UI ver 0.0.01
+
+ESSENCE WEB SERVICE
+Ryo Inagaki
+
+============================================================
+-->
+
+<div class="tab__area" data-tabarea-default="true" data-tabarea="home">
+<header class="heroheader" id="first" style="background-image:url(../images/heroheader_bg.gif);">
+  <div class="inner">
+    <h1 class="webfont" style="font-size:60px;text-align:center;line-height: 62px;padding:0;margin:0;">Docments</h1>
+    <div style="font-size:13px;text-align:center;">essenceUI documents.</div>
+  </div>
+</header>
+
+<section class="container">
+
+  <div id="jump-getstarted" class="separate__bottom" style="padding-top:50px;">
+    <article class="contents">
+      <h2 class="webfont" style="text-align:center;" data-animations="fadein" data-timing="scroll">Get started</h2>
+      <div class="block">
+        <h3>Donwload</h3>
+        <p>esssenceUI download quickly get started.</p>
+        <p><a href="https://github.com/ryo0702/essence-ui/archive/master.zip" class="btn btn__primary">Download</a></p>
+      </div>
+      <div class="block">
+        <h3>Load CSS and Js</h3>
+        <p>Load CSS and JS.</p>
+        <pre>
+        <code>
+          &lt;!doctype html>
+          &lt;html>
+            &lt;head>
+              &lt;link rel="stylesheet" href="essence_ui.css" type="text/css" media="all" />
+              &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+              &lt;link rel="stylesheet" href="../style.css" type="text/css" media="all" />
+              &lt;script src="https://code.jquery.com/jquery-2.2.3.min.js">&lt;/script>
+              &lt;script src="essence_ui.js">&lt;/script>
+          &lt;/head>
+          &lt;body>
+          &lt;/body>
+          &lt;/html>
+        </code>
+        </pre>
+      </div>
+    </article>
+  </div>
+
+</section>
+</div>
+
+<div id="footer" class="footermenu" style="background-image:url(../images/footer_bg.jpeg);background-position:bottom;">
+  <div class="container">
+    <div class="text__align--center">
+      <h2 class="text__title--lg"><a href="../index.html"><img src="../images/heroimage_logo.png" style="width:180px;max-width:100%;height:auto;"></a></h2>
+      <p class="text--xs"></p>
+      <p class="text--xs">Copyright © 2016 ESSENCE WEB SERVICE. All Right Reserved.<br />
+      The MIT License.</p>
+    </div>
+  </div>
+</div>
+
+<nav id="drawermenu" data-toggle="close">
+  <div class="headermenu block--shadow--large">
+    <div class="container">
+      <div class="row">
+        <div class="col__sm--12">
+          <h2 class="brand webfont"><a href="../index.html">essenceUI</a></h2>
+          <div class="toggle">
+            <div class="hamburger">
+              <span class="top"></span>
+              <span class="middle"></span>
+              <span class="bottom"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slidermenu">
+    <ul>
+      <li>
+        <a href="../contents/document"><i class="fa fa-book" aria-hidden="true"></i>Documents</a>
+        <ul>
+          <li><a href="contents/document#jump-getstarted"><i class="fa fa-angle-right" aria-hidden="true"></i>Get started</a></li>
+          <li><a href="contents/document#jump-drawermenu"><i class="fa fa-angle-right" aria-hidden="true"></i>Drawer menu</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="inline"><button type="button" class="btn btn__ghost btn--block btn__menu--close">Close</button></div>
+  </div>
+  <div class="overlay"></div>
+</nav>
+
+<div class="loading">
+  <i class="fa fa-repeat fa-spin" aria-hidden="true"></i>
+</div>
+
+<div id="tabbar" class="tabbar tabbar--essence tabbar--shadow tabbar--column--3">
+  <div class="tab" data-tab-click="link" data-tab-select="../index.html">
+    <div class="icon"><i class="fa fa-home" aria-hidden="true"></i></div>
+    <div class="title">Home</div>
+  </div>
+  <div class="tab" data-tab-click="link" data-tab-select="document.html">
+    <div class="icon"><i class="fa fa-book" aria-hidden="true"></i></div>
+    <div class="title">Document</div>
+  </div>
+  <div class="tab" data-tab-click="link" data-tab-select="config.html">
+    <div class="icon"><i class="fa fa-cog" aria-hidden="true"></i></div>
+    <div class="title">Config</div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script src="../dist/essence_ui.js"></script>
+<script>
+$(function(){
+
+  loading_screen();
+
+  $(function(){
+    setInterval(function(){
+      setTimeout(function(){
+        $('#logo_image').animate({
+          opacity:0
+        },10).attr({src:'../images/heroimage_logo_ani1.png'}).animate({
+          opacity:1
+        },50)
+      },500);
+      setTimeout(function(){
+        $('#logo_image').animate({
+          opacity:0
+        },10).attr({src:'../images/heroimage_logo_ani2.png'}).animate({
+          opacity:1
+        },50)
+      },500);
+      setTimeout(function(){
+        $('#logo_image').animate({
+          opacity:0
+        },10).attr({src:'../images/heroimage_logo.png'}).animate({
+          opacity:1
+        },50)
+      },500);
+    },3000);
+  });
+
+  essence_animations();
+  $('.heroheader').essence_parallax({
+    'speed':4,
+  });
+  $('.heroheader').essence_heroheader({
+    'heroheader_color':'#FFF'
+  });
+  $('.footermenu').essence_parallax({
+    'speed':10,
+  });
+  $('.alignheights').essence_alignheight({
+    'wrap_num':3,
+  });
+  $('#drawermenu').essence_drawermenu({
+    'header_padding_top':false,
+    'header_menu_color':'#FFF',
+    'header_menu_bgcolor':'#1b3e57',
+    'slider_menu_color':'#FFF',
+    'slider_menu_bgcolor':'#183041',
+    'header_menu_animation':'slidedown',
+  });
+  $('.contactus').essence_validation({
+    'error_message':'Error',
+    'success_message':'Thank you for sending the message.',
+  });
+  $('#tabbar').essence_tabbar({
+    'speed':4,
+  });
+});
+</script>
+</body>
+</html>

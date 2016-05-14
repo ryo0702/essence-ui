@@ -1,0 +1,108 @@
+@charset "utf-8";
+@import "compass";
+@import "styles/mixin";
+
+@import "styles/_reset";
+@import "styles/_layout";
+@import "styles/_text";
+@import "styles/_block";
+@import "styles/_button";
+@import "styles/_card";
+@import "styles/_form";
+@import "styles/_heroheader";
+@import "styles/_headermenu";
+@import "styles/_tabbar";
+
+
+.label {
+  font-size:10px;
+  line-height:100%;
+  text-wrap: normal;
+  text-align: center;
+  display: inline-block;
+  padding:3px;
+  @include border-radius(2px);
+}
+.label__required {
+  background-color: #ed0000;
+  color:#FFF;
+}
+
+
+article.contents{
+  h2 {
+    font-size:35px;
+    font-weight: bold;
+    line-height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  h3 {
+    font-size:18px;
+    font-weight: bold;
+  }
+  .block {
+    margin-bottom:40px;
+    &:last-child {
+      margin-bottom:40px;
+    }
+  }
+}
+
+.separate__bottom{
+  margin-bottom:80px;
+  padding-bottom:80px;
+  border-bottom:1px solid #e7eaf1;
+}
+
+.user__review {
+  @include clearfix();
+  .user__review__thumb {
+    width:35%;
+    float:left;
+    img {
+      width: 100%;
+      height: auto;
+      @include border-radius(50%);
+    }
+  }
+  .user__review__text {
+    width:65%;
+    float: left;
+    padding:10px;
+    .user__review__text__title {
+      font-size:15px;
+      font-weight: bold;
+      margin: 0 0 10px 0;
+      padding: 0;
+      line-height: 100%;
+    }
+    .user__review__text__post {
+      font-size:12px;
+      margin: 0 0 5px 0;
+    }
+    .user__review__text__comment {
+      font-size:15px;
+      margin: 0;
+      padding: 0;
+      line-height: 120%;
+    }
+  }
+}
+
+.loading {
+  display: none;
+  position: fixed;
+  text-align: center;
+  background-color: rgba(#000,0.8);
+  z-index:200;
+  top:0;
+  left:0;
+  width:100%;
+  i {
+    text-align: center;
+    font-size:45px;
+    z-index:201;
+    color:#FFF;
+  }
+}

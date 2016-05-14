@@ -1,0 +1,74 @@
+.validation {
+  display: none;
+}
+.alert {
+  padding:10px;
+  font-size:14px;
+  @include border-radius(3px);
+  strong {
+    font-size:16px;
+    font-weight:bold;
+  }
+}
+.alert__success {
+  background-color: #33de8b;
+  border:solid 1px #00cf6b;
+  color:#FFF;
+}
+.alert__error {
+  background-color: #e41d1d;
+  border:solid 1px #cf0000;
+  color:#FFF;
+}
+
+fieldset {
+  border:none;
+  padding:0;
+  margin:0 0 25px 0;
+  legend {
+    font-size:13px;
+    display: block;
+    box-sizing:border-box;
+    width:25%;
+    float: left;
+    font-weight: bold;
+    padding-right:5px;
+  }
+  .input {
+    width:75%;
+    float: left;
+    input[type=text],input[type=password],input[type=email] {
+      padding:5px 10px;
+      height:40px;
+      font-size:16px;
+      border:solid 1px #dadada;
+      width: 100%;
+      @include border-radius(3px);
+      @include input-placeholder {
+        color: #bfbfbf;
+        font-style: italic;
+      }
+    }
+    select {
+    	position: relative;
+    	width: 100%;
+    	padding:5px 10px;
+      height:40px;
+    	-webkit-appearance: none;
+    	-moz-appearance: none;
+    	appearance: none;
+    	border: 1px solid #dadada;
+    	background: #ffffff;
+      font-size:100%;
+      color:#707070;
+      @include border-radius(3px);
+      option {
+      }
+    }
+    .comment {
+      font-size:11px;
+      margin-top:3px;
+      color:#a1a1a1;
+    }
+  }
+}
