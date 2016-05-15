@@ -76,8 +76,8 @@ fieldset {
   }
 }
 
-fieldset.input_and_button {
-  border:none;
+fieldset.search {
+  @include clearfix;
   padding:0;
   margin:0;
   .button {
