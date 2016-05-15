@@ -25,6 +25,9 @@ fieldset {
   border:none;
   padding:0;
   margin:0 0 25px 0;
+  &:last-child{
+    margin:0;
+  }
   legend {
     font-size:13px;
     display: block;
@@ -70,5 +73,15 @@ fieldset {
       margin-top:3px;
       color:#a1a1a1;
     }
+  }
+}
+
+fieldset.input_and_button {
+  border:none;
+  padding:0;
+  margin:0;
+  .button {
+    width:25%;
+    float: left;
   }
 }
