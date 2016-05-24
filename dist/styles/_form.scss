@@ -1,3 +1,4 @@
+// Alerts
 .validation {
   display: none;
 }
@@ -21,6 +22,50 @@
   color:#FFF;
 }
 
+// Input
+input[type=text],input[type=password],input[type=email] {
+  padding:5px 10px;
+  height:40px;
+  font-size:16px;
+  border:solid 1px #dadada;
+  width: 100%;
+  @include border-radius(3px);
+  @include input-placeholder {
+    color: #bfbfbf;
+    font-style: italic;
+  }
+}
+textarea {
+  padding:5px 10px;
+  height:150px;
+  font-size:16px;
+  border:solid 1px #dadada;
+  width: 100%;
+  @include border-radius(3px);
+  @include input-placeholder {
+    color: #bfbfbf;
+    font-style: italic;
+  }
+}
+select {
+  position: relative;
+  width: 100%;
+  padding:5px 10px;
+  height:40px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #dadada;
+  background: #ffffff;
+  font-size:100%;
+  color:#707070;
+  @include border-radius(3px);
+  option {
+  }
+}
+
+
+// Input layout
 fieldset {
   border:none;
   padding:0;
@@ -40,39 +85,22 @@ fieldset {
   .input {
     width:75%;
     float: left;
-    input[type=text],input[type=password],input[type=email] {
-      padding:5px 10px;
-      height:40px;
-      font-size:16px;
-      border:solid 1px #dadada;
-      width: 100%;
-      @include border-radius(3px);
-      @include input-placeholder {
-        color: #bfbfbf;
-        font-style: italic;
-      }
-    }
-    select {
-    	position: relative;
-    	width: 100%;
-    	padding:5px 10px;
-      height:40px;
-    	-webkit-appearance: none;
-    	-moz-appearance: none;
-    	appearance: none;
-    	border: 1px solid #dadada;
-    	background: #ffffff;
-      font-size:100%;
-      color:#707070;
-      @include border-radius(3px);
-      option {
-      }
-    }
     .comment {
       font-size:11px;
       margin-top:3px;
       color:#a1a1a1;
     }
+  }
+}
+
+fieldset.vertical {
+  legend,.input {
+    width: 100%;
+    float:none;
+  }
+  legend {
+    margin-bottom:3px;
+    padding-right:0;
   }
 }
 

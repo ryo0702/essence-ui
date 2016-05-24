@@ -1,0 +1,41 @@
+@mixin btn($bgcolor,$color,$type){
+  background-color: $bgcolor;
+  border:solid 1px $bgcolor;
+  color:$color;
+  @if($type == 'dark'){
+    &:hover {
+      background-color: lighten($bgcolor,3%);
+      border:solid 1px lighten($bgcolor,3%);
+      color:$primary_color_rev;
+    }
+    &:active,&:focus {
+      background-color: darken($bgcolor,5%);
+      border:solid 1px darken($bgcolor,5%);
+      color:$primary_color_rev;
+    }
+    &[disabled]{
+      background-color: desaturate(lighten($bgcolor,5%),15%);
+      border:solid 1px desaturate(lighten($bgcolor,5%),15%);
+      color:$color;
+      cursor:not-allowed;
+    }
+  }
+  @else{
+    &:hover {
+      background-color: darken($bgcolor,5%);
+      border:solid 1px darken($bgcolor,5%);
+      color:$primary_color_rev;
+    }
+    &:active,&:focus {
+      background-color: lighten($bgcolor,3%);
+      border:solid 1px lighten($bgcolor,3%);
+      color:$primary_color_rev;
+    }
+    &[disabled]{
+      background-color: desaturate(lighten($bgcolor,5%),15%);
+      border:solid 1px desaturate(lighten($bgcolor,5%),15%);
+      color:$color;
+      cursor:not-allowed;
+    }
+  }
+}

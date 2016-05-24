@@ -22,6 +22,50 @@ function loading_screen(){
   });
 }
 
+// --- Modal ---------------------------------
+$('[data-modal-click]').each(function() {
+  var this_modal = this;
+  $(this_modal).on('click',function(){
+    $('.overlay').fadeIn(200);
+    var modal = $(this_modal).data('modal-click');
+    $('[data-modal='+modal+']').css('display','block');
+    var window_width = $(window).width();
+    var window_height = $(window).height();
+    var modal_window_width = $('[data-modal='+modal+']').children('.modal__window').width();
+    var modal_window_height = $('[data-modal='+modal+']').children('.modal__window').height();
+    var window_width_mar = window_width - modal_window_width;
+    var window_width_mar2 = window_width_mar / 2;
+    if(modal_window_height > window_height){
+      modal_window_height2 = window_height - window_width_mar;
+      $('[data-modal='+modal+']').children('.modal__window').css({
+        height:modal_window_height2,
+        overflow:'scroll',
+      });
+      $('[data-modal='+modal+']').children('.modal__window').css('top',window_width_mar2);
+    }
+    else{
+      var window_height_mar = window_height - modal_window_height;
+      var window_height_mar2 = window_height_mar / 2;
+      $('[data-modal='+modal+']').children('.modal__window').css('top',window_height_mar2);
+    }
+    $('[data-modal='+modal+']').children('.modal__window').css('left',window_width_mar2);
+  });
+});
+$('.modal__close').on('click',function(){
+  $('[data-modal]').each(function(){
+    $('[data-modal]').fadeOut(200);
+  });
+  $('.overlay').fadeOut(200);
+});
+
+$('.overlay').on('click',function(){
+  $('[data-modal]').each(function(){
+    $('[data-modal]').fadeOut(200);
+  });
+  $('.overlay').fadeOut(200);
+});
+
+
 // --- Heroheader ---------------------------------
 (function($) {
 $.fn.essence_heroheader = function(options){
@@ -144,7 +188,7 @@ $.fn.essence_drawermenu = function(options){
   var header_menu = $(wrapper).children('.headermenu');
   var toggle_button = $(wrapper).children('.headermenu').find('.toggle');
   var hamburger = $(wrapper).children('.headermenu').find('.hamburger');
-  var overlay = $(wrapper).children('.overlay');
+  var overlay = $('.overlay');
 
   // Function
   function drawermenu_close(){
@@ -369,6 +413,7 @@ $.fn.essence_tabbar = function(options){
 
 };
 })(jQuery);
+
 
 // --- Validation ---------------------------------
 (function($) {

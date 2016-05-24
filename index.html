@@ -8,7 +8,7 @@
     <meta name="description" content="Mobile first frontend framework.">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/ryo0702/essence-ui/master/dist/essence_ui.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="dist/essence_ui.css" type="text/css" media="all" />
     <link rel="stylesheet" href="style.css" type="text/css" media="all" />
     <style type="text/css">.webfont {font-family: 'Questrial', sans-serif;}</style>
   </head>
@@ -153,7 +153,7 @@ Ryo Inagaki
                 <input type="email" name="email" size="20" placeholder="Email">
               </div>
             </fieldset>
-            <fieldset data-required="true">
+            <fieldset class="vertical" data-required="true">
               <legend><div>Gender</div></legend>
               <div class="input">
                 <select name="gender">
@@ -184,7 +184,7 @@ Ryo Inagaki
 -->
 <nav id="drawermenu" data-toggle="close">
   <div class="headermenu block--shadow--large">
-    <div class="container">
+    <div class="container--fluid">
       <div class="row">
         <div class="col__sm--12">
           <h2 class="brand webfont"><a href="index.html">essenceUI</a></h2>
@@ -194,6 +194,9 @@ Ryo Inagaki
               <span class="middle"></span>
               <span class="bottom"></span>
             </div>
+          </div>
+          <div class="menu menu--right">
+            <a href="#" data-modal-click="modal_sample"><i class="fa fa-envelope" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
@@ -211,11 +214,16 @@ Ryo Inagaki
     </ul>
     <div class="inline"><button type="button" class="btn btn__ghost btn--block btn__menu--close">Close</button></div>
   </div>
-  <div class="overlay"></div>
 </nav>
-
-<div class="loading">
-  <i class="fa fa-repeat fa-spin" aria-hidden="true"></i>
+<div class="modal" data-modal="modal_sample">
+  <div class="modal__close"><i class="fa fa-times" aria-hidden="true"></i></div>
+  <div class="modal__window">
+    <div class="card">
+      <div class="card__block--lg">
+        aaa
+      </div>
+    </div>
+  </div>
 </div>
 
 <div id="tabbar" class="tabbar tabbar--essence tabbar--shadow tabbar--column--3">
@@ -244,8 +252,14 @@ Ryo Inagaki
   </div>
 </div>
 
+<div class="loading">
+  <i class="fa fa-repeat fa-spin" aria-hidden="true"></i>
+</div>
+
+<div class="overlay"></div>
+
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-<script src="https://rawgit.com/ryo0702/essence-ui/master/dist/essence_ui.js"></script>
+<script src="dist/essence_ui.js"></script>
 <script>
 $(function(){
   loading_screen();
@@ -267,7 +281,7 @@ $(function(){
     'header_menu_bgcolor':'#1b3e57',
     'slider_menu_color':'#FFF',
     'slider_menu_bgcolor':'#183041',
-    'header_menu_animation':'slidedown',
+    'header_menu_animation':false,
   });
   $('.contactus').essence_validation({
     'error_message':'Error',
