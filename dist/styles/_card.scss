@@ -68,12 +68,10 @@
   padding:30px;
 }
 
-.card {
-  .card__block {
-    border-bottom:solid 1px #ededed;
-    &:last-child{
-      border-bottom:none;
-    }
+.card__block {
+  border-bottom:solid 1px #ededed!important;
+  &:last-child{
+    border-bottom:none;
   }
 }
 .card__block,.card__block--md {

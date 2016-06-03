@@ -91,6 +91,8 @@
   width:300px;
   z-index:10;
   position: fixed;
+  background-color:#000000;
+  color:#FFF;
   top:0;
   left:0;
   @include box-shadow(3px 0 5px 1px rgba(#000,0.2));
