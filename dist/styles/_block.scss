@@ -39,3 +39,20 @@
     @include rotate(3deg);
   }
 }
+
+.block__pad {
+  padding:10px;
+
+}
+
+.block__bg--blackboard {
+  color:#FFF;
+  @include background(linear-gradient(60deg,#073e21,#0c4f2c,#0c3e24,#084f2a) fixed);
+  background-color: #073e21;
+  background-size:cover;
+}
+
+.block__flame--woody {
+  @include box-shadow(0 0 0 10px rgba(#784f09,1) inset,0 0 0 13px rgba(#4f3304, 1)inset,0 1px 1px rgba(#000,0.3) inset,0 3px 3px rgba(#000,0.3));
+  padding:20px;
+}
