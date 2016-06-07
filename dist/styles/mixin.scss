@@ -1,7 +1,7 @@
-@mixin btn($bgcolor,$color,$type){
+@mixin btn($bgcolor,$primary_color_rev,$type){
   background-color: $bgcolor;
   border:solid 1px $bgcolor;
-  color:$color;
+  color:$primary_color_rev;
   @if($type == 'dark'){
     &:hover {
       background-color: lighten($bgcolor,3%);
@@ -16,7 +16,7 @@
     &[disabled]{
       background-color: desaturate(lighten($bgcolor,5%),15%);
       border:solid 1px desaturate(lighten($bgcolor,5%),15%);
-      color:$color;
+      color:$primary_color_rev;
       cursor:not-allowed;
     }
   }
@@ -34,7 +34,7 @@
     &[disabled]{
       background-color: desaturate(lighten($bgcolor,5%),15%);
       border:solid 1px desaturate(lighten($bgcolor,5%),15%);
-      color:$color;
+      color:$primary_color_rev;
       cursor:not-allowed;
     }
   }

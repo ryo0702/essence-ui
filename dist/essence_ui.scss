@@ -18,8 +18,10 @@ $success_color_rev:#FFF;
 @import "styles/_form";
 @import "styles/_heroheader";
 @import "styles/_headermenu";
+@import "styles/_smenu";
 @import "styles/_navigation";
 @import "styles/_tabbar";
+@import "styles/_table";
 
 
 .modal {
@@ -153,5 +155,12 @@ article.contents{
     font-size:45px;
     z-index:201;
     color:#FFF;
+  }
+}
+
+
+.mq__pc--hidden {
+  @media (min-width: 992px) {
+    display:none;
   }
 }

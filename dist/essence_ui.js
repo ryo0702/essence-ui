@@ -128,7 +128,7 @@ $.fn.essence_alignheight = function(options){
   var wrapper = this;
   var array_children = $(wrapper).children('[data-alignheights]');
 
-  if(544 < $(window).width()){
+  // if(544 < $(window).width()){
     if(set.wrap_num == "" || set.wrap_num == null || set.wrap_num == undefined || set.wrap_num == 0){
       $(array_children).each(function() {
         var this_height = 0;
@@ -161,7 +161,7 @@ $.fn.essence_alignheight = function(options){
         }
       });
     }
-  }
+  // }
 
   return true;
 };
