@@ -30,3 +30,16 @@
     }
   }
 }
+
+.smenu--sm {
+  ul {
+    & > li {
+      float: left;
+      & > a {
+        text-align: center;
+        font-size:13px;
+        padding:10px 20px;
+      }
+    }
+  }
+}

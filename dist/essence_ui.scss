@@ -22,7 +22,12 @@ $success_color_rev:#FFF;
 @import "styles/_navigation";
 @import "styles/_tabbar";
 @import "styles/_table";
+@import "styles/_bg";
 
+
+img {
+  vertical-align:bottom;
+}
 
 .modal {
   display: none;

@@ -67,7 +67,7 @@
 .nogutter,.row--0 {
   margin-left: 0px;
   margin-right: 0px;
-  & > [class*='col-'] {
+  & > [class*='col__'] {
     padding-right:0;
     padding-left:0;
   }
@@ -76,7 +76,7 @@
 .row--xs {
   margin-right: -.2142rem;
  margin-left: -.2142rem;
-  & > [class*='col-'] {
+  & > [class*='col__'] {
     padding-right:.2142rem;
     padding-left:.2142rem;
   }
@@ -85,7 +85,7 @@
 .row--sm {
   margin-right: -.4285rem;
  margin-left: -.4285rem;
-  & > [class*='col-'] {
+  & > [class*='col__'] {
     padding-right:.4285rem;
     padding-left:.4285rem;
   }
@@ -94,7 +94,7 @@
 .row--lg {
   margin-right: -1.571rem;
  margin-left: -1.571rem;
-  & > [class*='col-'] {
+  & > [class*='col__'] {
     padding-right:1.571rem;
     padding-left:1.571rem;
   }
